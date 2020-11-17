@@ -1,3 +1,11 @@
+/*
+
+    Time complexity: O(2^n)
+    Space complexity: O(n)
+
+
+*/
+
 class Solution {
 public:
     vector<vector<int>> subsets(vector<int>& nums) {
