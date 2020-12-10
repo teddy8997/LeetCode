@@ -10,6 +10,7 @@
  * };
  */
 /*
+    法一: recursion
     inorder traversal基本題
     訪問順序為左中右
 */
@@ -28,5 +29,27 @@ private:
         inorder(root->left, ans);
         ans.push_back(root->val);
         inorder(root->right, ans);
+    }
+};
+/*
+    法二: iterator
+*/
+class Solution {
+public:
+    vector<int> inorderTraversal(TreeNode* root) {
+        vector<int> ans;
+        stack<TreeNode*> s;
+        TreeNode* cur = root;
+        while(cur || !s.empty()){
+            while(cur){
+                s.push(cur);
+                cur = cur->left;
+            }
+            cur = s.top();
+            s.pop();
+            ans.push_back(cur->val);
+            cur = cur->right;
+        }
+        return ans;
     }
 };
