@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Definition for a binary tree node.
  * struct TreeNode {
  *     int val;
@@ -12,6 +12,12 @@
 /*
     利用一個變數來記錄每一層的左右子樹是否平衡
     如果不平衡的話就設定成false然後返回
+
+    平衡數的條件是:
+	1.左子樹是平衡的
+	2.右子樹是平衡的
+	3.左右子樹的高度差不大於1
+
     time complexity: O(N)
     Space complexity: O(1) 最差情況下是O(N)
 */
