@@ -8,12 +8,12 @@ public:
         vector<vector<int>> ans;
         vector<int> cur;
         vector<int> visited(nums.size());
-        permutation(nums, ans, cur, visited, 0);
+        permutation(nums, ans, cur, visited);
         return ans;
     }
 private:
-    void permutation(vector<int>& nums, vector<vector<int>> &ans, vector<int> &cur, vector<int> &visited, int s){
-        if(s == nums.size()){
+    void permutation(vector<int>& nums, vector<vector<int>> &ans, vector<int> &cur, vector<int> &visited){
+        if(cur.size() == nums.size()){
             ans.push_back(cur);
             return;
         }
