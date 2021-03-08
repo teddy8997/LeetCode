@@ -1,3 +1,6 @@
+/*
+    奇偶分堆
+*/
 class Solution {
 public:
     vector<int> beautifulArray(int N) {
