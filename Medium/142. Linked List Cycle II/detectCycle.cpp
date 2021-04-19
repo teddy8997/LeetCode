@@ -6,6 +6,7 @@
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
+//https://ithelp.ithome.com.tw/articles/10223721
 class Solution {
 public:
     ListNode *detectCycle(ListNode *head) {
